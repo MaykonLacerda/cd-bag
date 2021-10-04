@@ -15,9 +15,7 @@ class CreateUserService {
       username,
       password: passwordHash
     })
-
   }
-
 }
 
 export { CreateUserService };

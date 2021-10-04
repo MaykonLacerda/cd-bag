@@ -18,6 +18,11 @@ class UsersRepository {
 
     await this.repository.save(user);
   }
+
+  async findByUsername(username: string): Promise<User> {
+    const user = await this.repository.findOne({ username });
+    return user;
+  }
 }
 
 export { UsersRepository };
