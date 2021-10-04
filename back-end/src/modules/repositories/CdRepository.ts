@@ -1,4 +1,4 @@
-import { getRepository, Repository } from 'typeorm';
+import { getRepository, Repository, UpdateResult } from 'typeorm';
 import { Cd } from '../entities/Cd';
 import { ICreateCdDTO } from '../dtos/ICreateCdDTO';
 
@@ -23,11 +23,13 @@ class CdRepository {
   }
 
   async listByUser(user_id: string): Promise<Array<Cd>> {
-    const cds = await this.repository.find({
+    return await this.repository.find({
       where: { user_id }
     });
+  }
 
-    return cds;
+  async updateCd({ id, name, artist, release_year, genre, duration }: ICreateCdDTO): Promise<UpdateResult> {
+    return await this.repository.update({ id }, { name, artist, release_year, genre, duration });
   }
 }
 

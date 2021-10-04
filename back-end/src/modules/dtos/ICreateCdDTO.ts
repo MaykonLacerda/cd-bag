@@ -1,5 +1,6 @@
 class ICreateCdDTO {
-  user_id: string;
+  id?: string;
+  user_id?: string;
   name: string;
   artist: string;
   release_year: string;
