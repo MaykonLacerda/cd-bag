@@ -11,7 +11,7 @@ class UpdateCdController {
 
     await updateCdService.execute({ id, name, artist, release_year, genre, duration });
 
-    return res.status(200).send();
+    return res.status(204).send();
   }
 }
 
