@@ -21,6 +21,14 @@ class CdRepository {
 
     await this.repository.save(cd);
   }
+
+  async listByUser(user_id: string): Promise<Array<Cd>> {
+    const cds = await this.repository.find({
+      where: { user_id }
+    });
+
+    return cds;
+  }
 }
 
 export { CdRepository };
