@@ -24,13 +24,13 @@ class AuthenticateUserService {
     const user = await usersRepository.findByUsername(username);
 
     if (!user) {
-      throw new Error("Email or password incorrect!");
+      throw new Error("Username or password incorrect!");
     }
 
     const passwordMatch = await ecryptionService.compare(password, user.password);
 
     if (!passwordMatch) {
-      throw new Error("Email or password incorrect!");
+      throw new Error("Username or password incorrect!");
     }
 
     const token = await tokenOptionsService.generateToken({}, "5h");

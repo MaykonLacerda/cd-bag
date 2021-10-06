@@ -1,5 +1,6 @@
 import { ICreateCdDTO } from "../../dtos/ICreateCdDTO";
 import { CdRepository } from "../../repositories/CdRepository";
+import { UsersRepository } from "../../repositories/UsersRepository";
 
 
 class CreateCdService {
