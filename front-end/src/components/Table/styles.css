@@ -1,0 +1,15 @@
+table td, table th {
+  margin: 0;
+  padding: 0.5rem 0.9rem;
+  border-bottom: 1px solid #ededed;
+  border-right: 1px solid #ededed;
+  position: relative;
+  text-align: center;
+}
+
+table {
+  border: 1px solid;
+  border-radius: 8px;
+  box-shadow: var(--shadow-template);
+  padding: 10px;
+}
