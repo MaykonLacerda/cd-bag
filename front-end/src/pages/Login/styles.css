@@ -2,9 +2,8 @@
   border-radius: 10px;
   box-shadow: 5px 12px 12px 4px rgba(0,0,0,0.14),0 17px 50px 0 rgba(0,0,0,0.14);
   padding: 4rem;
-  background: whitesmoke;
+  background: #fdfdfd;
 }
-
 
 #card-content {
   display: flex;
@@ -49,4 +48,12 @@
 
 #submit-btn:hover {
   box-shadow: 0 8px 8px 0 rgba(0,0,0,0.18),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+@media (max-width: 620px) {
+  #card {
+    border-radius: 0px;
+    box-shadow: none;
+    background: whitesmoke;
+  }
 }

@@ -1,12 +1,16 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
+import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
 
 function Routes() {
   return (
     <BrowserRouter>
-      <Route path="/" exact component={Login} />
+      <Switch>
+        <Route exact path="/" component={Login} />
+        <Route exact path="/dashboard" component={Dashboard} />
+      </Switch>
     </BrowserRouter>
   );
 }
