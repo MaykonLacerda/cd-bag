@@ -28,6 +28,10 @@ class CdRepository {
     });
   }
 
+  async list(): Promise<Array<Cd>> {
+    return await this.repository.find();
+  }
+
   async update({ id, name, artist, release_year, genre, duration }: ICreateCdDTO): Promise<UpdateResult> {
     return await this.repository.update({ id }, { name, artist, release_year, genre, duration });
   }

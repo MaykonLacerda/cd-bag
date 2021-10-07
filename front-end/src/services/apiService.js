@@ -1,7 +1,7 @@
 import api from './api';
 
-const get = (id) => {
-  return api.get(`/cds/list/${id}`);
+const get = () => {
+  return api.get(`/cds/list/`);
 };
 
 const create = (data) => {

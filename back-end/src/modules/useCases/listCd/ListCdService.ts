@@ -10,10 +10,10 @@ interface IResponse {
 }
 
 class ListCdService {
-  async execute(user_id: string) {
+  async execute() {
     const cdRepository = new CdRepository();
 
-    const cds = await cdRepository.listByUser(user_id);
+    const cds = await cdRepository.list();
 
     return cds;
   }

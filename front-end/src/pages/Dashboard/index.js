@@ -7,8 +7,6 @@ import apiService from '../../services/apiService';
 
 import "./styles.css";
 
-const user_id = "ce4848a4-d765-4a72-bf34-eda0b3f21e41"; //remover depois
-
 const Dashboard = () => {
   const [cds, setCds] = useState([]);
   const [editing, setEditing] = useState(false);
@@ -17,7 +15,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await apiService.get(user_id);
+      const response = await apiService.get();
 
       setCds(response.data);
     })();
