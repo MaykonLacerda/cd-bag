@@ -35,8 +35,8 @@ function EditCdForm(props) {
         <label>Duração</label>
         <input type="text" name="duration" value={cd.duration} onChange={handleInputChange} />
         <div className="button-form">
-          <button type="submit">Editar</button>
-          <button onClick={() => props.setEditing(false)}>Cancelar</button>
+          <button className="btn" type="submit">Editar</button>
+          <button className="btn" onClick={() => props.setEditing(false)}>Cancelar</button>
         </div>
       </form>
     </div>

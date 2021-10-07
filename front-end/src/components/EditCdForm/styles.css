@@ -3,17 +3,17 @@
   justify-content: center;
 }
 
-.form label {
+.form > label {
   margin-top: 0.5em;
   font-size: 0.9rem;
 }
 
-.form input {
+.form > input {
   width: 100%;
   font-size: 1.1rem;
 }
 
-.form button {
+.btn {
   margin: 10px 30px;
   width: 30%;
   font-size: 1.2rem;

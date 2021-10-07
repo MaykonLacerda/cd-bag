@@ -36,8 +36,8 @@ function AddCdForm(props) {
         <label>Duração</label>
         <input type="text" name="duration" value={cd.duration} onChange={handleInputChange} />
         <div className="button-form">
-          <button type="submit">Salvar</button>
-          <button>Cancelar</button>
+          <button className="btn" type="submit">Salvar</button>
+          <button className="btn">Cancelar</button>
         </div>
       </form>
     </div>
