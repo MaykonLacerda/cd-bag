@@ -11,13 +11,18 @@ const Dashboard = () => {
   const [cds, setCds] = useState([]);
   const [editing, setEditing] = useState(false);
   const initialFormState = { name: '', artist: '', release_year: '', genre: '', duration: '' }
-  const [currentCd, setCurrentCd] = useState(initialFormState)
+  const [currentCd, setCurrentCd] = useState(initialFormState);
+
+
 
   useEffect(() => {
     (async () => {
       const response = await apiService.get();
 
-      setCds(response.data);
+
+      if (editing == false) {
+        setCds(response.data);
+      }
     })();
   }, [cds]);
 
