@@ -19,12 +19,12 @@ const Dashboard = () => {
     (async () => {
       const response = await apiService.get();
 
-
-      if (editing == false) {
+      if (editing === false) {
         setCds(response.data);
       }
     })();
   }, [cds]);
+
 
   const addCd = (cd) => {
     apiService.create(cd)
