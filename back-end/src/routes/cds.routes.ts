@@ -12,8 +12,8 @@ const updateCdController = new UpdateCdController();
 const deleteCdController = new DeleteCdController();
 
 cdsRoutes.post('/', createCdController.handle);
-cdsRoutes.post('/list/:id', listCdController.handle);
-cdsRoutes.post('/update/:id', updateCdController.handle);
-cdsRoutes.post('/delete/:id', deleteCdController.handle);
+cdsRoutes.get('/list/:id', listCdController.handle);
+cdsRoutes.put('/update/:id', updateCdController.handle);
+cdsRoutes.delete('/delete/:id', deleteCdController.handle);
 
 export { cdsRoutes };
