@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
+import './styles.css'
+
 function EditCdForm(props) {
   const [cd, setCd] = useState(props.currentCd)
 
@@ -21,7 +23,7 @@ function EditCdForm(props) {
 
   return (
     <div>
-      <form onSubmit={onSubmit}>
+      <form className="form" onSubmit={onSubmit}>
         <label>Nome</label>
         <input type="text" name="name" value={cd.name} onChange={handleInputChange} />
         <label>Artista</label>
@@ -32,8 +34,10 @@ function EditCdForm(props) {
         <input type="text" name="genre" value={cd.genre} onChange={handleInputChange} />
         <label>Duração</label>
         <input type="text" name="duration" value={cd.duration} onChange={handleInputChange} />
-        <button type="submit">Editar</button>
-        <button onClick={() => props.setEditing(false)}>Cancelar</button>
+        <div className="button-form">
+          <button type="submit">Editar</button>
+          <button onClick={() => props.setEditing(false)}>Cancelar</button>
+        </div>
       </form>
     </div>
   )

@@ -46,13 +46,12 @@ const Dashboard = () => {
   }
 
   return (
-    <div>
+    <div className="dashboard">
       <h1>Bolsa de CD's</h1>
 
       <div>
         {editing ? (
           <div>
-            <h2>Edit user</h2>
             <EditCdForm
               setEditing={setEditing}
               currentCd={currentCd}
@@ -61,7 +60,6 @@ const Dashboard = () => {
           </div>
         ) : (
           <div>
-            <h2>Add user</h2>
             <AddCdForm addCd={addCd} />
           </div>
         )}

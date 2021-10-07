@@ -24,7 +24,7 @@ function AddCdForm(props) {
 
   return (
     <div>
-      <form onSubmit={onSubmit}>
+      <form className="form" onSubmit={onSubmit}>
         <label>Nome</label>
         <input type="text" name="name" value={cd.name} onChange={handleInputChange} />
         <label>Artista</label>
@@ -35,8 +35,10 @@ function AddCdForm(props) {
         <input type="text" name="genre" value={cd.genre} onChange={handleInputChange} />
         <label>Duração</label>
         <input type="text" name="duration" value={cd.duration} onChange={handleInputChange} />
-        <button type="submit">Salvar</button>
-        <button>Cancelar</button>
+        <div className="button-form">
+          <button type="submit">Salvar</button>
+          <button>Cancelar</button>
+        </div>
       </form>
     </div>
   )
