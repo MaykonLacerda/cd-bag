@@ -19,7 +19,7 @@ const Dashboard = () => {
 
       setCds(response.data);
     })();
-  }, []);
+  }, [cds]);
 
   const addCd = (cd) => {
     apiService.create(cd)
