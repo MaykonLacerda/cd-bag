@@ -50,6 +50,25 @@
   box-shadow: var(--shadow-template);
 }
 
+#register-btn {
+  display: inline-block;
+  text-align: center;
+
+  text-decoration: none;
+  margin-top: 1rem;
+  padding: 8px;
+  background-color: white;
+  border: 1px solid #4CAF50;
+  color: #4CAF50;
+  font-size: 18px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+#register-btn:hover {
+  box-shadow: var(--shadow-template);
+}
+
 @media (max-width: 620px) {
   #card {
     border-radius: 0px;
