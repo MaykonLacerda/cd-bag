@@ -1,7 +1,0 @@
-FROM postgres
-
-ENV POSTGRES_DB=cd-bag
-ENV POSTGRES_USER=cd-bag
-ENV POSTGRES_PASSWORD=password
-
-USER postgres

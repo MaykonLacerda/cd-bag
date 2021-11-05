@@ -2,18 +2,27 @@ version: '3'
 
 services: 
   app: 
-    container_name: 'cd-bag_app'
     build: .
-    entrypoint: 'dockerize -wait tcp://db:5432 -timeout 45s .docker/entrypoint.sh'
+    container_name: 'cd-bag_app'
+    entrypoint: dockerize -wait tcp://db:5432 -timeout 45s ./.docker/entrypoint.sh
+    command: "yarn dev"
+    tty: true
     ports: 
       - 3333:3333
     volumes: 
-      - .:/home/node/app
+      - .:/home/app
     depends_on: 
       - db
 
   db: 
+    image: postgres
     container_name: 'cd-bag_db'
-    build: ./.docker/postgres/
     ports: 
       - 5432:5432
+    tty: true
+    volumes: 
+      - ./.docker/pgdata:/var/lib/postgresql/data
+    environment: 
+      - POSTGRES_DB=cd-bag
+      - POSTGRES_USER=cd-bag
+      - POSTGRES_PASSWORD=password
